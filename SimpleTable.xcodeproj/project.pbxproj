@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5077CFA81C49950B0090F808 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5077CFA71C49950B0090F808 /* AppDelegate.swift */; };
-		5077CFAA1C49950B0090F808 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5077CFA91C49950B0090F808 /* ViewController.swift */; };
-		5077CFAD1C49950B0090F808 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5077CFAB1C49950B0090F808 /* Main.storyboard */; };
+		5077CFAA1C49950B0090F808 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5077CFA91C49950B0090F808 /* RootViewController.swift */; };
 		5077CFAF1C49950B0090F808 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5077CFAE1C49950B0090F808 /* Assets.xcassets */; };
 		5077CFB21C49950B0090F808 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5077CFB01C49950B0090F808 /* LaunchScreen.storyboard */; };
 		5077CFBD1C49950B0090F808 /* SimpleTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5077CFBC1C49950B0090F808 /* SimpleTableTests.swift */; };
+		509CAEEF1C499ED1008928CC /* CanvasListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CAEEE1C499ED1008928CC /* CanvasListDataProvider.swift */; };
+		509CAEF11C49B0CD008928CC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509CAEF01C49B0CD008928CC /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +29,15 @@
 /* Begin PBXFileReference section */
 		5077CFA41C49950B0090F808 /* SimpleTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5077CFA71C49950B0090F808 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5077CFA91C49950B0090F808 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5077CFAC1C49950B0090F808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5077CFA91C49950B0090F808 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		5077CFAE1C49950B0090F808 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5077CFB11C49950B0090F808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5077CFB31C49950B0090F808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5077CFB81C49950B0090F808 /* SimpleTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5077CFBC1C49950B0090F808 /* SimpleTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableTests.swift; sourceTree = "<group>"; };
 		5077CFBE1C49950B0090F808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		509CAEEE1C499ED1008928CC /* CanvasListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasListDataProvider.swift; sourceTree = "<group>"; };
+		509CAEF01C49B0CD008928CC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				5077CFA71C49950B0090F808 /* AppDelegate.swift */,
-				5077CFA91C49950B0090F808 /* ViewController.swift */,
-				5077CFAB1C49950B0090F808 /* Main.storyboard */,
+				5077CFA91C49950B0090F808 /* RootViewController.swift */,
+				509CAEF01C49B0CD008928CC /* DetailViewController.swift */,
+				509CAEEE1C499ED1008928CC /* CanvasListDataProvider.swift */,
 				5077CFAE1C49950B0090F808 /* Assets.xcassets */,
 				5077CFB01C49950B0090F808 /* LaunchScreen.storyboard */,
 				5077CFB31C49950B0090F808 /* Info.plist */,
@@ -179,7 +182,6 @@
 			files = (
 				5077CFB21C49950B0090F808 /* LaunchScreen.storyboard in Resources */,
 				5077CFAF1C49950B0090F808 /* Assets.xcassets in Resources */,
-				5077CFAD1C49950B0090F808 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +199,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5077CFAA1C49950B0090F808 /* ViewController.swift in Sources */,
+				509CAEEF1C499ED1008928CC /* CanvasListDataProvider.swift in Sources */,
+				5077CFAA1C49950B0090F808 /* RootViewController.swift in Sources */,
 				5077CFA81C49950B0090F808 /* AppDelegate.swift in Sources */,
+				509CAEF11C49B0CD008928CC /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +225,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5077CFAB1C49950B0090F808 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5077CFAC1C49950B0090F808 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5077CFB01C49950B0090F808 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -388,6 +384,7 @@
 				5077CFC31C49950B0090F808 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5077CFC41C49950B0090F808 /* Build configuration list for PBXNativeTarget "SimpleTableTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +393,7 @@
 				5077CFC61C49950B0090F808 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
